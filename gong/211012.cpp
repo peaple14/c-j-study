@@ -5,13 +5,14 @@ int j, i, a, b;
 
 int prm(int a, int b)
 {
-	for (int i;  i < b;  b++) {		
-		for (int j; j < a; a++) {
+	for (int i=0;  i < b;  b++) {		
+		for (int j=0; j < a; a++) {
 			printf("*");
 		}
 		printf("\n");
-
 	}
+
+	return 0;
 }
 
 int main() {
@@ -20,7 +21,8 @@ int main() {
 	scanf_s("%d" ,& a);
 	printf("높이는");
 	scanf_s("%d", &b);
-
+	a = 10;
+	b = 5;
 	prm(a, b);
 
 	return 0;
