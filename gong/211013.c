@@ -1,8 +1,6 @@
 #include <stdio.h>
 #define CRT_SECURE_NO_WARNING
 
- //º¹½À
-
 //void main()
 //{
 //	int a = 4;
@@ -21,3 +19,19 @@
 //	}
 //	
 //}
+
+//void main()
+//{
+//	int a = 0;
+//	int* b = &a;
+//	*b = 10;
+//	printf("%d\n",&a);
+//	printf("%d\n",b);
+//	printf("%d",&b);
+//	
+//}
+
+void main() {
+	char* sa[2];
+	sa[1] = "morning";
+}
