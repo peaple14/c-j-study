@@ -1,6 +1,6 @@
 #include <stdio.h>
-#define CRT_SECURE_NO_WARNING
-
+#include <string.h>
+#define CRT_SECURE_NO_WARNINGS
 //void main()
 //{
 //	int a = 4;
@@ -13,13 +13,11 @@
 //			sta[i][j] = p;
 //			p += 1;
 //			printf("sta[%d][%d]=%d \n", i, j, sta[i][j]);
-//
-//
 //		}
 //	}
 //	
 //}
-
+//==========
 //void main()
 //{
 //	int a = 0;
@@ -30,8 +28,20 @@
 //	printf("%d",&b);
 //	
 //}
+//=========
+struct employee {
+	char name[10];
+	int age;
+	int pay;
 
+};
 void main() {
-	char* sa[2];
-	sa[1] = "morning";
+	struct employee Aee;
+	struct employee * a = &Aee;
+	strcpy(a->name, "길동");
+	a->age = 30;
+	a->pay = 2021;
+
+	printf("%s은 %d살이고 %d의 월급을받는다.", a->name, a->age, a->pay);
 }
+
