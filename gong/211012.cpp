@@ -1,7 +1,7 @@
 ﻿#include <stdio.h>
 #define CRT_SECURE_NO_WARNING
 
-int j, i, a, b;
+
 
 int prm(int a, int b)
 {
