@@ -38,8 +38,9 @@ struct employee {
 void main() {
 	struct employee Aee;
 	struct employee * a = &Aee;
-	strcpy(a->name, "길동");
-	a->age = 30;
+	strcpy(Aee.name, "길동");
+//  strcpy(a->name, "길동"); 도 됨
+	a->age = 30; 
 	a->pay = 2021;
 
 	printf("%s은 %d살이고 %d의 월급을받는다.", a->name, a->age, a->pay);
