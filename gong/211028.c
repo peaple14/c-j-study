@@ -30,14 +30,14 @@ treeNode* searchBST(treeNode* root, char x) {
 treeNode* insertNode(treeNode* p, char x) {
 	treeNode* newNode; // 새로운 노드
 	if (p == NULL) { //공백상태일시
-		newNode == (treeNode*)malloc(sizeof(treeNode));
-		newNode->key = x; //왜 에러뜨는지좀 알기@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		newNode = (treeNode*)malloc(sizeof(treeNode)); 
+		newNode->key = x; 
 		newNode->left = NULL;
 		newNode->right = NULL;
 		return newNode;
 	}
 	else if (x < p->key) p->left = insertNode(p->left, x); // x값보다 p값이 작을시 왼쪽에
-	else if (x > p->key) p->left = insertNode(p->right, x);//크다면 오른쪽에
+	else if (x > p->key) p->right = insertNode(p->right, x);//크다면 오른쪽에
 	else printf("\n 이미 같은 키가 있습니다 \n"); // 같다면 출력
 
 	return p;
