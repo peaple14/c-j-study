@@ -129,9 +129,9 @@ void DFS_adjList(graphType* g, int v) {
 			v = w->vertex;//이동했으니까 정점으로 설정
 			w = g->adjList_H[v];//첫번째노드로 설정후 인접정점 있는동안 반복
 			}
-			else w = w->link;
+			else w = w->link;//정점 이동후 다시 반복
 		}
-		v = pop();
+		v = pop();//방문한곳이니 뒤로 돌아가기
 	}
 }
 
