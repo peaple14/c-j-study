@@ -1,6 +1,8 @@
 ﻿#include <stdio.h>
 #define CRT_SECURE_NO_WARNING
 
+// 빗금표시는 영역선택후 컨트롤K누른다음 컨트롤U하면 사라짐
+// 반대로 빗금 치는것은 컨트롤K누른다음 컨트롤c하면 생김
 
 
 int prm(int a, int b)

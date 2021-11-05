@@ -5,10 +5,8 @@
 #define FALSE 0
 #define TRUE 1
 
+////그래프 너비우선 탐색
 
-
-////그래프 깊이우선 탐색
-//extern써도 되지만 모양새를위햐여 안씀
 
 //인접리스트 구조체
 typedef struct graphNode {
@@ -24,46 +22,64 @@ typedef struct graphType {
 
 typedef int element;
 
-//노드 구조체
-typedef struct stackNode {
+typedef struct QNode {//큐노드 구조체
 	int data;
-	struct stackNode* link;
-}stackNode;
+	struct QNode* link;
+}QNode;
 
-stackNode* top;
+//큐 구조체
+typedef struct { 
+	QNode* front, * rear;
+}LQueueType;
 
-//공백인지
-int isEmpty() {
-	if (top == NULL) return 1;
+//큐끼리 이어주는것
+LQueueType* createLinkedQueue() {
+	LQueueType* LQ;
+	LQ = (LQueueType*)malloc(sizeof(LQueueType));
+	LQ->front = NULL;//초기화필수
+	LQ->rear = NULL;//초기화
+	return LQ;
+}
+//공백상태인지
+int isEmpty(LQueueType* LQ) {
+	if (LQ->front == NULL) {
+		printf("\n Linked Queue is empty");
+		return 1;
+	}
 	else return 0;
 }
 
-//집어넣는거
-void push(int item) {//스택구조(푸쉬,팝구조)
-	stackNode* temp = (stackNode*)malloc(sizeof(stackNode)); // 메모리부여
-	temp->data = item;//알꺼라 생각하고 패스
-	temp->link = top;
-	top = temp;
+//큐노드 집어넣는것
+void enQueue(LQueueType* LQ, int item) {
+	QNode* newNode = (QNode*)malloc(sizeof(QNode));
+	newNode->data = item;
+	newNode->link = NULL;
+	if (LQ->front = NULL) {
+		LQ->front = NULL;
+		LQ->rear = NULL;
+	}
+	else {
+		LQ->rear->link = newNode;//LQ의 rear가 가리키고있는 링크
+		LQ->rear = newNode; 
+	}
 }
 
-//빼는거
-int pop() {
+//큐노드 빼는것
+int deQueue(LQueueType* LQ) {
+	QNode* old = LQ->front; //front 를 old로지정
 	int item;
-	stackNode* temp = top;
-
-	if (isEmpty()) {//비어있을시
-		printf("\n\n Stack is empty \n");
-		return 0;
-	}
-	else{
-		item = temp->data;//뭐가빠지는지 보여주기용
-		top = temp->link;//링크 따라가서 부여
-		free(temp);//해제
-		return item;//보여주기
+	if (isEmpty(LQ)) return 0; //비어있을시
+	else {
+		item = old->data; //보여주기용
+		LQ->front = LQ->front->link; //front를 한칸위로(링크따라간것으로) 지정
+		if (LQ->front == NULL)
+			LQ->rear = NULL;
+		free(old);//메모리 해제
+		return item;
 	}
 }
 
-//초기공백그래프 생성
+//초기공백그래프
 void createGraph(graphType* g) {
 	int v;
 	g->n = 0;//정점개수 0
@@ -109,29 +125,25 @@ void print_adjList(graphType* g) {
 	}
 }
 
-//그래프g에서 정점v에대한 깊이우선탐색
-void DFS_adjList(graphType* g, int v) {
+//그래프 g에서 정점 v에대한 너비우선탐색
+void BFS_adjList(graphType* g, int v) {
 	graphNode* w;
-	top = NULL; //top설정
-	push(v);//탐색장소 푸쉬
-	g->visited[v] = TRUE; //방문했던곳 True로 설정
-	printf(" %c", v + 65);//출력
+	LQueueType* Q;
+	Q = createLinkedQueue();
+	g->visited[v] = TRUE;
+	printf(" %c", v + 65);//A~G로 바꾸어 출력
+	enQueue(Q, v);
 
-	//공백상태 아닐때동안 계속
-	while (!isEmpty()) {
-		w = g->adjList_H[v];
-		while (w) {//인접정점 있는동안반복
-			if (!g->visited[w->vertex]){
-			if (isEmpty()) push(v);//공백일시 바로 푸쉬
-			push(w->vertex);//정점푸쉬
-			g->visited[w->vertex] = TRUE;//방문했다고표기
-			printf(" %c", w->vertex + 65);//방문한곳 출력
-			v = w->vertex;//이동했으니까 정점으로 설정
-			w = g->adjList_H[v];//첫번째노드로 설정후 인접정점 있는동안 반복
+	while (!isEmpty(Q)) {//큐가 공백이 아닌동안
+		v = deQueue(Q);
+		//방문안한경우
+		for (w = g->adjList_H[v]; w; w = w->link)
+			if (!g->visited[w->vertex]) {//방문하지 않은것이라면
+				g->visited[w->vertex] = TRUE; //방문표시
+				printf(" %c", w->vertex + 65);//출력
+				enQueue(Q, w->vertex);//집어넣기
 			}
-			else w = w->link;//정점 이동후 다시 반복
-		}
-		v = pop();//방문한곳이니 뒤로 돌아가기
+
 	}
 }
 
@@ -162,8 +174,8 @@ void main() {
 	printf("\n G9의 인접리스트");
 	print_adjList(G9);
 
-	printf("\n\n////////////\n\n깊이 우선 탐색 >>");
-	DFS_adjList(G9, 0);
+	printf("\n\n////////////\n\n너비 우선 탐색 >>");
+	BFS_adjList(G9, 0);
 
 	getchar();
 }
