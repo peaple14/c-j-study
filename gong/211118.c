@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//진짜 기초부터 차근차근 빠르게 넘어가보기(백준알고리즘)
 int main()
 {
 	int a;
