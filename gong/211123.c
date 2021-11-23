@@ -44,7 +44,7 @@ int eval(char* exp) {
 			push(test);
 			break;
 		case ')':
-			if (top == NULL) return "0";
+			if (top == NULL) return 0;
 			else
 			{
 			test2 = pop();
@@ -53,8 +53,8 @@ int eval(char* exp) {
 			}
 		}
 	}
-	if (top == NULL) return "1";
-	else return "0";
+	if (top == NULL) return 1;
+	else return 0;
 }
 
 
@@ -70,6 +70,7 @@ void main() {
 		if (result == 1)  printf("YES\n");
 		else printf("NO\n");
 	}
+}
 
 
 
