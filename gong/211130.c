@@ -6,7 +6,7 @@
 char result[SIZE * 2];
 int stack[SIZE];
 int top = -1;
-
+ 
 int main() {
     int n;
     scanf("%d", &n);
