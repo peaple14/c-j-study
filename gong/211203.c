@@ -60,7 +60,7 @@ int main() {
 		}
 		push(i);
 	}
-	while (!isEmpty()) { //짝을 찾지 못한 아이들
+	while (!isEmpty()) {
 		bkup[topp()] = -1;
 		pop();
 	}
