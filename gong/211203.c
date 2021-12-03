@@ -13,6 +13,7 @@ typedef struct stackNode {
 
 stackNode* top;
 
+
 void push(int item) {
 	stackNode* k = (stackNode*)malloc(sizeof(stackNode));
 	k->data = item;
@@ -23,7 +24,6 @@ void push(int item) {
 int pop() {
 	int item;
 	stackNode* k = top;
-	if (top == NULL) exit(1);
 	item = k->data;
 	top = k->link;
 	free(k);
@@ -44,23 +44,29 @@ int a[1000000];//갯수
 int bkup[1000000]; // 비교할것 저장하는것
 
 int main() {
+	top = -1;
 	scanf_s("%d", &how);
 	for (int i = 0; i < how; i++) {
 		scanf_s("%d", &a[i]);
-		bkup[i] = -1;
 	}
 	push(0);
-	for (int i = 0; i < how; i++) {
-
+	for (int i = 1; i < how; i++) {
+		if (isEmpty()) {
+			push(i);
+		}
 		while (!isEmpty() && a[topp()] < a[i]) {
-			bkup[pop()] = a[i];
+			bkup[topp()] = a[i];
+			pop();
 		}
 		push(i);
-
+	}
+	while (!isEmpty()) { //짝을 찾지 못한 아이들
+		bkup[topp()] = -1;
+		pop();
 	}
 
 	for (int p = 0; p < how; p++) {
-		printf("gd");
 		printf("%d ", bkup[p]);
 	}
 }
+
