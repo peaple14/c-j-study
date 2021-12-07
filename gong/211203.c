@@ -44,21 +44,21 @@ int a[1000000];//갯수
 int bkup[1000000]; // 비교할것 저장하는것
 
 int main() {
-	top = -1;
-	scanf_s("%d", &how);
+	top = -1;//처음값 지정해주고
+	scanf_s("%d", &how);//비교될 배열 저장해주고
 	for (int i = 0; i < how; i++) {
 		scanf_s("%d", &a[i]);
 	}
-	push(0);
-	for (int i = 1; i < how; i++) {
+	push(0);//초기값 넣어주고
+	for (int i = 1; i < how; i++) {//초기화한후
 		if (isEmpty()) {
 			push(i);
 		}
-		while (!isEmpty() && a[topp()] < a[i]) {
-			bkup[topp()] = a[i];
-			pop();
+		while (!isEmpty() && a[topp()] < a[i]) {//오큰수찾았다면
+			bkup[topp()] = a[i];//집어넣어주기
+			pop();//그후 팝
 		}
-		push(i);
+		push(i);//푸쉬해주기
 	}
 	while (!isEmpty()) {
 		bkup[topp()] = -1;

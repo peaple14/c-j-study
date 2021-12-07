@@ -16,7 +16,7 @@ int main() {
         scanf("%d", &arr[i]);
 
     int num = 1;
-    int idx = 0, result_idx = 0;
+    int idx = 0, result_idx = 0;    
     while (1) {
         if (top == -1 || stack[top] < arr[idx]) {
             stack[++top] = num++;
