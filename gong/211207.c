@@ -4,6 +4,36 @@
 //;_CRT_SECURE_NO_WARNINGS;
 //백트래킹하다 절망. 기초부터 다시
 
+int main(void) {
+
+    int a, b, c, d = -1, result, input, count = 0;
+    scanf("%d", &input);
+    result = input;
+    while (d != result) {
+        a = input / 10;
+        b = input % 10; 
+        c = (a + b) % 10; 
+        d = (b * 10) + c; 
+        input = d;
+        count++;
+    }
+    printf("%d", count);
+}
+
+//int main() {
+//    int a, b;
+//    while (scanf("%d %d", &a, &b) != EOF) {
+//        printf("%d\n", a + b);
+//    }
+//}
+//int main() {
+//	int a, b = 0;
+//	while (1) {
+//		scanf("%d %d", &a, &b);
+//		if (a == 0 && b == 0) { break; }
+//		printf("%d", a + b);
+//	}
+//}
 //int main() {
 //	int a, b = 0;
 //	int row[10001];
@@ -17,8 +47,6 @@
 //		}
 //	}
 //}
-
-
 //int main() {
 //	int a = 0;
 //	scanf("%d", &a);
