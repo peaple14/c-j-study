@@ -3,6 +3,8 @@
 #include <string.h>
 //;_CRT_SECURE_NO_WARNINGS;
 //백트래킹하다 절망. 기초부터 다시
+//일이 넘 많다
+
 
 //int main() {
 //	char word[101];
