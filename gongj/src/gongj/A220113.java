@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class A220113 {
 
-//	public static void main(String[] args) { // 10818
+//	public static void main(String[] args) { //10818 
 //		int a=0;
 //		int arr[];
 //		int max=-1000001;
