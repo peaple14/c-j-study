@@ -33,7 +33,7 @@ public class A220113 {
 //	}
 	
 	
-//	public static int add(int[] scores) {
+//	public static int add(int[] scores) { 
 //		int sum=0;
 //		for(int i=0;i<3;i++) {
 //			sum+=scores[i];
