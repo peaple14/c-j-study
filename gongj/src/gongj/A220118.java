@@ -9,7 +9,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 //대2때 못한과제
-//이해하기위한 복잡함
+//이해하기위한 난잡함
 class Mul{
 	public static Mul mul;
 

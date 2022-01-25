@@ -12,10 +12,10 @@ import java.util.StringTokenizer;
 
 
 
-public class A220124 {//자바 따라했던부분 혼자해보기.
+public class A220124 {//2750
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));//2750
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int count = Integer.parseInt(br.readLine());
 		int[] sor = new int[count];	
 		for(int i=0;i<count;i++) {

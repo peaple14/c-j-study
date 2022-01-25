@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-public class A220113 { //대충 따라해보기(이해안됨)
+public class A220113 { //Tip.뒤쪽부터하면 훅감앞에서부터 차근차근(약간이해안됨)
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		 
