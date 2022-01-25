@@ -47,6 +47,7 @@ public class A220125 {
 //	if(a%c==0 && b%c==0) {
 //		GCD = c;
 //	}
+//
 //	c++;
 //	if(c>10001) break;
 //}
