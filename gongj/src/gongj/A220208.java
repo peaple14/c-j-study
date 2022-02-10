@@ -14,9 +14,14 @@ public class A220208 {
 
 	public static void main(String[] args) throws IOException{
 
-
+	
+	
+	
+	
+	
+	
+	
 	}
-
 }
 
 
