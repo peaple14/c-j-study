@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>A220217파일입니다.</title>
+</head>
+<body>
+<section>
+
+    <h2>섹션영역</h2>
+
+    <p>220217파일의 내용들</p>
+
+</section>
+
+<h style="border: 10px solid green">
+
+    블록이란.
+
+</h>
+
+<div style="background-color:lightblue; color:green; text-align:center">
+
+    <h1>div란</h1>
+    <p>div와 style로 한번에 적용가능</p>
+
+</div>
+<p>
+    <span style="background-color:puple; color:threedhighlight;">span태그</span>는 인라인이다.내용만큼 차지한다.
+</p>
+
+<iframe src="C:\Users\whwo2\git\gongj\gongj\src\gonghc\A220214.html" name="before" style="width:100%; height:400px;"></iframe>
+<!-- 웹페이지 삽입가능 -->
+<p>
+
+    <a href="C:\Users\whwo2\git\gongj\gongj\src\gonghc\A220214.html"target="before">220214파일보기</a>
+	<br>
+    <a href="C:\Users\whwo2\git\gongj\gongj\src\gonghc\A220215.html"target="before">220215파일보기</a>
+</p>
+  
+<select name="before">
+
+    <option value="220214파일보기"selected> 220214 파일보기
+
+    <option value="220215파일보기"> 220215 파일보기
+</select>
+<!-- 뒷부분에서 선택한부분 변경법 넣기.(자바스크립쪽에서 나옴) -->
+<button type="button" onclick="alert('변경은 나중에')">
+    확인.
+</button>
+
+<form>
+    readonly : <br><input type="text" name="readonly" value="볼수있고 수정불가" readonly><br>
+    disabled : <br><input type="text" name="disabled" value="사용불가" disabled><br>
+    maxlength  : <br><input type="text" name="maxlength" value="최대글자길이" maxlength = "20"><br>
+    size  : <br><input type="text" name="size " value="크기" size="50" ><br>
+</form>
+<br>
+<footer>
+
+    <p>푸터입니다.</p>
+
+    <p>2022-02-17</p>
+
+    <p>제작위치:대구</p>
+
+</footer>
+
+<!-- 데이터 리스트 -->
+<form action="C:\Users\whwo2\git\gongj\gongj\src\gonghc\A220217.html">
+
+    <input list="select" name="select">
+
+        <datalist id="select">
+
+            <option value="220214">
+
+            <option value="220215">
+
+        </datalist>
+
+    <input type="submit" value="확인">
+
+</form>
+
+<form action="C:\Users\whwo2\git\gongj\gongj\src\gonghc\A220217.html"
+
+    oninput="total.value=parseInt(value01.value)/parseInt(value02.value)">
+
+    <input type="number" id="a1" name="a1" value="0">
+    /
+    ( 0
+    <input type="range" id="a2" name="a2" value="0" min="0" max="100">
+    100 )
+    =
+    <output name="total" for="value01 value02"></output><br><br>
+</form>
+
+<input type="color" name="color" value="#FFFFFF">
+<!-- 색 선택 가능 나머지는 필요할때마다 검색후 쓰기 -->
+<!-- input 요소또한 필요할때 검색후 쓰기 -->
+
+
+</html>
