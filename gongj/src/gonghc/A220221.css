@@ -1,0 +1,53 @@
+@charset "EUC-KR";
+/* 배경,h1,p의 스타일 동시변경 */
+	h1 {
+    color: red;
+    font-size:3em;
+}
+
+p {
+      color: orange;
+ 	  font-weight: bold;
+
+}
+
+/* li의 하위인 em에 적용 */
+li em {
+  color: rebeccapurple;
+}
+
+/* 링크 방문x:핑크색 방문o:초록색 */
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: green;
+}
+
+/* 위에 지정해뒀었어도 special이 우선순위 먼저 */
+.special{
+	color:mint;
+}
+/* 테두리와 상자의 스타일을 조정 */
+.outer {
+  border: 5px solid black;
+}
+
+.box {
+  padding: 10px;
+  width: calc(90% - 30px); /* 90%를 채우고 30px의 크기로 */
+  background-color: rebeccapurple;
+  color: white;
+  transform: rotate(0.99turn) /* 이해하기 위한 기울림 */
+}
+/* body의 색을 pink로 했지만 그위에 gray로 덮어버린것. */
+body {
+  background-color: pink;
+}
+
+@media (min-width: 30em) {
+  body {
+    background-color: gray;
+  }
+}
