@@ -1,4 +1,5 @@
 @charset "EUC-KR";
+/* css는 부트스트랩 까지만 */
 /* 배경,h1,p의 스타일 동시변경 */
 	h1 {
     color: red;

@@ -2,16 +2,17 @@
 <html lang="ko-KR">
 <head>
 <!-- 테스트용 주어온것 -->
-    <meta charset="utf-8">
+     <meta charset="utf-8">
+
     <title>CSS로 시작하기</title>
-    <link rel="stylesheet" href="A220221.css">
+    <link rel="stylesheet" href="A220222.css">
 </head>
 
 <body>
 	
     <h1>레벨 1 제목입니다</h1>
     
-    <p class="special">나는 무슨 색입니까?</p>
+    <p class="special">이건 무슨색?</p>
 
     <p>이것은 단락입니다. 본문에는 <span>span 요소</span>와 <a href="http://example.com">링크</a>가 있습니다.</p>
 
@@ -22,10 +23,56 @@
         <li>항목 둘</li>
         <li>항목 <em>셋</em></li>
     </ul>
+    outer:주위의선 box:outer안의 색을표현 ,상자안의 글자들
     <div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
 
-</body>
+	<ul class="main">
+    <li>Item One</li>
+    <li>Item Two
+        <ul>
+            <li>2.1</li>
+            <li>2.2</li>
+        </ul>
+    </li>
+    <li>Item Three
+        <ul class="special">
+            <li>3.1
+                <ul>
+                    <li>3.1.1</li>
+                    <li>3.1.2</li>
+                </ul>
+            </li>
+            <li>3.2</li>
+        </ul>
+    </li>
+</ul>
 
+    <blockquote>
+            <p>This blockquote is styled</p>
+        </blockquote>
+
+        <blockquote class="fix-this">
+            <p>This blockquote is not styled</p>
+        </blockquote>
+        
+<h2>Heading with no class</h2>
+<h2 class="small">Heading with class of small</h2>
+<h2 class="bright">Heading with class of bright</h2>
+<h2>Heading with no class</h2>
+
+<p>I am a paragraph. A short one.</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p>I am another paragraph.
+ Some of the <span class="block">words</span>
+  have been wrapped in a <span>span element</span>.
+</p>
+
+
+</body>
 </html>
 
 
