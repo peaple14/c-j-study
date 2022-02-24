@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>부트스트랩 기초</title>
+<!-- 무료테마를 다운하여 어디서 어디껏을 썼는지 알아보기 -->
+<!-- 자바스크립트로 클릭,또는 입력을 한후에 실행되는것을 조정 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+</head>
+<body>
+ 	<!-- 그리드 시스템 제공(알아서 반응하여 크기조절) -->
+	<!-- <div class="col-lg-4 col-md-4 col-sm-6" style="background-color: red;">
+	A
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-6" style="background-color: Yellow;">
+	B
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-12" style="background-color: blue;">
+	C
+	</div>  -->
+	<!-- 이런식으로 가져와서 붙여쓰기 가능 세세한부분 조정가능 -->
+	<div class="row">
+        <div class="col-md-6"> <!-- 자동크기조절 -->
+          <table class="table table-bordered"> <!-- 무슨 테마인지 -->
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@TwBootstrap</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+<!-- 일반적인 페이지의 링크는 /머시라/머시라 처럼 쓰인다. http:// 로 연결되게는 하지않는다. -->
+<!-- 이런기능이 엄청 많이있기에 여러가지를 사용해본후에 테마다운후 조정해볼예정 -->
+	
+</body>
+</html>
