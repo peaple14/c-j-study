@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바스크립트 3일차</title>
+</head>
+<body>
+<script>
+/* let money ={
+		much:3000.5262,
+		say_much: function(){
+		alert("남은돈은"+money.much+"입니다.");
+		}
+}
+money.say_much(); */
+//let str = 'hello'
+//alert(str[2]) => l
+//str[2] = o 처럼 변경은 불가능
+
+/* let str = 'i am so hungry and i dont wont hungry';
+let text = 'hungry';
+let now = 0;
+while(true){
+	let boom = str.indexOf(text,now); //text를 now번째부터 찾는다
+	if(boom == -1) break;
+	
+	alert(`위치: ${boom}`);
+	now = boom+1;
+} */
+
+//배열에는 여러가지 자료형 가능
+/* let arr =['스크립트',true,121213,function(){alert('자바스크립트')}];
+arr[3](); */ 
+
+//c처럼 복잡하게 할필요 없이 간단함.
+//pop,push는 빠르지만 shift,unshift는 느림.
+/* let arr1 = ['기차','차표','표범']
+alert(arr1.pop());
+alert(arr1);
+arr1.push('표범');
+alert(arr1);
+alert(arr1.shift());
+alert(arr1);
+arr1.unshift('기차');
+alert(arr1); */
+
+/* ["a","b","ㄱ","ㄴ"].forEach(alert); */
+
+/* function compare(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+}
+let arr = [ 1, 14, 231,21 ];
+arr.sort(compare); //요소취급되어서 재정렬됨 그렇기에 함수만들어서 비교한번더.
+alert(arr); */
+
+/* let person = { name: "Kim" };
+let visits = new Map();
+visits.set(person, 119);
+alert( visits.get(person) );  */
+
+
+/* let date = new Date(2022, 2, 14, 2, 3, 4);
+alert( date ); */
+
+/* let food = {
+		time : 11
+};
+
+let menu = {
+		main:"chicken",
+		type:[{name: "fied"},{name:"Seasoned"}],
+		moeny:15000
+};
+
+food.occupiedBy=menu;
+alert(JSON.stringify(menu,function replacer(key,value){
+	alert(`${key}: ${value}`);
+	return (key == 'occupiedBy') ? undefined : value;
+})); */
+
+/* let food={
+		type:fried
+};
+
+let dinner = {
+		menu:"chicken",
+		date: new Date(Date.UTC(2022,2,14)), //문자열로 변환됨
+		food
+};
+
+alert(JSON.stringify(dinner) ); */
+
+
+
+</script>
+<p>2022-03-14</p>
+</body>
+</html>
